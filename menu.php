@@ -1,15 +1,13 @@
 <?php
 class Menu {
-  private $name;
-  private $price;
-  private $image;
+  protected $name;
+  protected $price;
   private $orderCount = 0;
-  private static $count = 0;
+  protected static $count = 0;
   
-  public function __construct($name, $price, $image) {
+  public function __construct($name, $price) {
     $this->name = $name;
     $this->price = $price;
-    $this->image = $image;
     self::$count ++;
   }
   
@@ -19,10 +17,6 @@ class Menu {
   
   public function getName() {
     return $this->name;
-  }
-  
-  public function getImage() {
-    return $this->image;
   }
   
   public function getOrderCount() {
