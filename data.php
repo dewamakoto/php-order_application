@@ -1,10 +1,13 @@
 <?php
-require_once('menu.php');
+require_once('food.php');
+require_once('drink.php');
 
-$juice = new Menu('JUICE', 600);
-$coffee = new Menu('COFFEE', 500);
-$curry = new Menu('CURRY', 900);
-$pasta = new Menu('PASTA', 1200);
+$juice = new Drink('JUICE', 600,'アイス');
+$coffee = new Drink('COFFEE', 500,'ホット');
+$curry = new Food('CURRY', 900,3);
+$pasta = new Food('PASTA', 1200,1);
+
+
 
 $menus = array($juice, $coffee, $curry, $pasta);
 
