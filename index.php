@@ -19,7 +19,11 @@
       <div class="menu-items">
         <?php foreach ($menus as $menu): ?>
           <div class="menu-item">
-            <h3 class="menu-item-name"><?php echo $menu->getName() ?></h3>
+            <h3 class="menu-item-name">
+              <a href="show.php?name=<?php echo $menu->getName()?>">
+                <?php echo $menu->getName() ?>
+              </a>
+            </h3>
             <?php if($menu instanceof Drink): ?>
               <p class="menu-item-type"><?php echo $menu->getType() ?></p>
               <?php else: ?>
